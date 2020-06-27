@@ -1,6 +1,6 @@
 ---
 layout: project
-title: 'Hawkeye'
+title: 'HAWKEYE'
 date: 2020-05-27 18:59:07 -0500
 ---
 

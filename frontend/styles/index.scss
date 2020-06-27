@@ -1,1 +1,30 @@
 @import '~bulma/bulma';
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#wrapper {
+  flex: 1;
+}
+
+.navbar {
+  background-color: #03468f;
+}
+
+.navbar-item {
+  color: white;
+}
+
+.has-bottom-border {
+  border-bottom: 1px solid grey;
+}
+
+.background-top {
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  height: 75px;
+}

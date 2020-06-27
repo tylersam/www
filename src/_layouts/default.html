@@ -4,11 +4,18 @@
     {% include head.html %}
   </head>
   <body class="{{ page.layout }} {{ page.page_class }}">
-    {% include navbar.html %}
+    <div id="wrapper">
+      {% include navbar.html %}
 
-    <main class="container">
-      {{ content }}
-    </main>
+      <image
+        src="/images/top-background-optimized.svg"
+        class="background-top"
+      ></image>
+
+      <main class="container">
+        {{ content }}
+      </main>
+    </div>
 
     {% include footer.html %}
   </body>
