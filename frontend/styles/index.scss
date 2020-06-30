@@ -1,4 +1,4 @@
-@import '~bulma/bulma';
+@import "~bulma/bulma";
 
 body {
   display: flex;
@@ -20,6 +20,10 @@ body {
 
 .has-bottom-border {
   border-bottom: 1px solid grey;
+}
+
+.has-light-bottom-border {
+  border-bottom: 1px solid lightgrey;
 }
 
 .background-top {
