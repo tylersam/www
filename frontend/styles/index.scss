@@ -32,3 +32,17 @@ body {
   z-index: 1000;
   height: 75px;
 }
+
+.icons-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.icon-container img {
+  max-height: 75px;
+  max-width: 125px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
