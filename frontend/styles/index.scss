@@ -1,20 +1,44 @@
 @import "~bulma/bulma";
 
+html {
+  height: 100%;
+}
+
 body {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
+  height: 100%;
 }
 
 #wrapper {
   flex: 1;
 }
 
-.navbar {
+.navbar,
+.navbar-menu {
   background-color: #03468f;
 }
 
 .navbar-item {
+  color: white;
+}
+
+.navbar-brand > a.navbar-item:hover,
+a.navbar-item:hover,
+a.navbar-item.active {
+  background-color: #022c58;
+  color: white;
+}
+
+.navbar-burger {
+  color: white;
+}
+
+.navbar-burger:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+a.navbar-burger:hover {
   color: white;
 }
 
@@ -29,8 +53,14 @@ body {
 .background-top {
   position: absolute;
   right: 0;
-  z-index: 1000;
-  height: 75px;
+  max-height: 75px;
+  margin-top: -1px;
+}
+
+.background-bottom {
+  max-height: 300px;
+  margin-left: -5px;
+  margin-right: auto;
 }
 
 .icons-column {
@@ -45,4 +75,16 @@ body {
   width: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+@include mobile {
+  .background-top {
+    height: 40px;
+  }
+}
+
+@include until($fullhd) {
+  .background-top {
+    height: 50px;
+  }
 }

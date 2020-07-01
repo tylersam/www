@@ -1,4 +1,4 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-lik" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <a
@@ -24,19 +24,38 @@
 
     <div id="nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="/about">
+        <a
+          class="navbar-item {% if page.url == '/' %} {{ 'active' }} {% endif %}"
+          href="/"
+        >
+          home
+        </a>
+
+        <a
+          class="navbar-item {% if page.url == '/about/' %} {{ 'active' }} {% endif %}"
+          href="/about"
+        >
           about
         </a>
 
-        <a class="navbar-item" href="/projects">
+        <a
+          class="navbar-item {% if page.url == '/projects/' %} {{ 'active' }} {% endif %}"
+          href="/projects"
+        >
           projects
         </a>
 
-        <a class="navbar-item" href="/tools">
+        <a
+          class="navbar-item {% if page.url == '/tools/' %} {{ 'active' }} {% endif %}"
+          href="/tools"
+        >
           tools
         </a>
 
-        <a class="navbar-item" href="/contact">
+        <a
+          class="navbar-item {% if page.url == '/contact/' %} {{ 'active' }} {% endif %}"
+          href="/contact"
+        >
           contact
         </a>
       </div>
