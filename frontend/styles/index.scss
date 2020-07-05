@@ -1,1 +1,66 @@
-@import '~bulma/bulma';
+@import "~bulma/bulma";
+@import "nav";
+@import "projects";
+@import "tools";
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#wrapper {
+  flex: 1;
+}
+
+.section {
+  padding: 1.5rem 1.5rem;
+}
+
+.has-bottom-border {
+  border-bottom: 1px solid grey;
+}
+
+.has-light-bottom-border {
+  border-bottom: 1px solid lightgrey;
+}
+
+.background-top {
+  position: absolute;
+  right: 0;
+  max-height: 70px;
+  margin-top: -1px;
+}
+
+.background-bottom {
+  max-height: 300px;
+  margin-left: -5px;
+  margin-right: auto;
+}
+
+@include mobile {
+  .background-top {
+    height: 40px;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  #homepage-image-container {
+    margin-left: 6rem !important;
+    margin-right: 6rem !important;
+  }
+}
+
+@include until($fullhd) {
+  .background-top {
+    height: 50px;
+  }
+}

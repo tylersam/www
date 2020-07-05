@@ -1,0 +1,32 @@
+.navbar,
+.navbar-menu {
+  background-color: #03468f;
+}
+
+.navbar-item {
+  color: white;
+}
+
+.navbar-brand > a.navbar-item:hover,
+a.navbar-item:hover,
+a.navbar-item.active {
+  background-color: #022c58;
+  color: white;
+}
+
+.navbar-brand .navbar-item {
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+
+.navbar-burger {
+  color: white;
+}
+
+.navbar-burger:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+a.navbar-burger:hover {
+  color: white;
+}

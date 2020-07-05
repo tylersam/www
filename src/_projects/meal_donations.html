@@ -1,0 +1,72 @@
+---
+layout: project
+title: "Meal Donations"
+icon: "/images/icons/sync.svg"
+description: "live updating donation displays"
+tags: ["React Native", "Apple TV", "Ruby on Rails"]
+order: 5
+---
+
+<div class="columns">
+  <div class="column">
+    <figure class="image">
+      <img src="/images/sc-m4m-sm.png" />
+    </figure>
+  </div>
+
+  <div class="column">
+    <figure class="image">
+      <img src="/images/store-m4m-sm.png" />
+    </figure>
+  </div>
+</div>
+
+<div class="columns is-centered mt-6">
+  <div class="column is-four-fifths">
+    <div
+      class="is-size-4 mb-4 has-text-weight-semibold has-text-centered has-light-bottom-border"
+    >
+      {% render "project_name", icon: page.icon, url: page.url, title:
+      page.title, detail_page: true %}
+    </div>
+
+    <p>
+      This company was founded on a mission to fight world hunger. For every
+      meal purchased, a meal is donated through
+      <a href="https://fmsc.org" target="_blank">Feed My Starving Children</a>.
+      Each store displays a continuously updating meal count helping guests
+      connect with the company mission. The marketing team also uses the system
+      to showcase current initiatives and promotions.
+    </p>
+
+    <div class="is-size-5 has-text-weight-semibold mt-5">
+      <div
+        class="is-size-4 has-text-weight-semibold has-text-centered has-light-bottom-border"
+      >
+        Tech Stack
+      </div>
+    </div>
+
+    <div class="mt-4 has-text-centered">
+      {% for tag in page.tags %}
+      <!-- comment stops prettier formatting error-->
+      {% assign tag_class = tag | downcase | split: " " | join: "-" %}
+      <span class="tag {{ tag_class }}">
+        {{ tag }}
+      </span>
+      {% endfor %}
+    </div>
+
+    <p class="mt-3">
+      The frontend of this project is an Apple TV App distributed through the
+      company's MDM. I built the app using React Native with a Ruby on Rails
+      backend. Apple TVs allow for simple company-wide management and offer a
+      user-friendly experience for store leaders.
+    </p>
+
+    <div class="mt-4 has-text-centered">
+      Want to learn more about why I use this stack? Read about my
+      <a href="/tools">tools of choice</a>.
+    </div>
+  </div>
+</div>

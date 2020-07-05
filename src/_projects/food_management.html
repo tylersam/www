@@ -1,0 +1,81 @@
+---
+layout: project
+title: "Food Management"
+icon: "/images/icons/crockery.svg"
+description: "tool to track and control food costs"
+tags: ["Ruby on Rails", "PostgreSQL", "Redis", "React"]
+order: 4
+---
+
+<div class="columns is-vcentered">
+  <div class="column is-two-thirds">
+    <div>
+      <figure class="image">
+        <img src="/images/radar-usages-browser-2-sm.png" />
+      </figure>
+    </div>
+  </div>
+
+  <div class="column">
+    <div>
+      <figure class="image is-hidden-mobile">
+        <img src="/images/radar-action-plans-browser-sm.png" />
+      </figure>
+    </div>
+
+    <div>
+      <figure class="image">
+        <img src="/images/radar-purchases-browser-sm.png" />
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="columns is-centered mt-5">
+  <div class="column is-four-fifths">
+    <div
+      class="is-size-4 mb-4 has-text-weight-semibold has-text-centered has-light-bottom-border"
+    >
+      {% render "project_name", icon: page.icon, url: page.url, title:
+      page.title, detail_page: true %}
+    </div>
+
+    <p>
+      The Food Cost Management system is used for building recipes, tracking
+      product mix, monitoring purchasing, taking inventory, and creating action
+      plans. The project began out of a need to handle messy data from the point
+      of sale system and has developed into a tool built around
+      organization-specific processes. With the help of the company's executive
+      chef, we built this tool to track and control food costs.
+    </p>
+
+    <div class="is-size-5 has-text-weight-semibold mt-4">
+      <div
+        class="is-size-4 has-text-weight-semibold has-text-centered has-light-bottom-border"
+      >
+        Tech Stack
+      </div>
+    </div>
+
+    <div class="mt-4 has-text-centered">
+      {% for tag in page.tags %}
+      <!-- comment stops prettier formatting error-->
+      {% assign tag_class = tag | downcase | split: " " | join: "-" %}
+      <span class="tag {{ tag_class }}">
+        {{ tag }}
+      </span>
+      {% endfor %}
+    </div>
+
+    <p class="mt-3">
+      This project is a Ruby on Rails app that uses Postgres, Redis, and S3 for
+      data storage and uses a mixture of server rendered HTML and React
+      components (via Webpacker) for the frontend.
+    </p>
+
+    <div class="mt-4 has-text-centered">
+      Want to learn more about why I use this stack? Read about my
+      <a href="/tools">tools of choice</a>.
+    </div>
+  </div>
+</div>

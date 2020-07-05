@@ -1,11 +1,13 @@
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=no"
+/>
 {% capture page_title %}{{ page.title | strip_html | strip_newlines }}{%
 endcapture %}
 <title>
   {% if page_title != "" %}{{ page_title | escape }} | {{ site.metadata.title |
-  escape }}{% else %}{{ site.metadata.title | escape }}: {{
-  site.metadata.tagline | escape }}{% endif %}
+  escape }}{% else %}{{ site.metadata.title | escape }}{% endif %}
 </title>
 
 <meta name="description" content="{{ site.metadata.description }}" />

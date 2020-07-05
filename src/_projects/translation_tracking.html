@@ -1,0 +1,81 @@
+---
+layout: project
+title: "Translation Tracking"
+icon: "/images/icons/books.svg"
+description: "build and track translation projects"
+tags: ["Ruby on Rails", "PostgreSQL", "StimulusReflex"]
+order: 6
+---
+
+<div class="columns is-vcentered">
+  <div class="column is-7">
+    <div>
+      <figure class="image">
+        <img src="/images/sam2-translation-browser-1-sm.png" />
+      </figure>
+    </div>
+  </div>
+
+  <div class="column">
+    <div>
+      <figure class="image is-hidden-mobile">
+        <img src="/images/sam2-translation-browser-2-sm.png" />
+      </figure>
+    </div>
+
+    <div>
+      <figure class="image">
+        <img src="/images/sam2-translation-browser-3-sm.png" />
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="columns is-centered mt-5">
+  <div class="column is-four-fifths">
+    <div
+      class="is-size-4 mb-4 has-text-weight-semibold has-text-centered has-light-bottom-border"
+    >
+      {% render "project_name", icon: page.icon, url: page.url, title:
+      page.title, detail_page: true %}
+    </div>
+
+    <p>
+      I built this tool to help my wife break down her Bible translation
+      projects into (approximately) even assignments. It allows her to track her
+      progress and redistribute work over available workdays if she gets behind.
+      It also generates PDFs that she imports into GoodNotes for writing her
+      translations.
+    </p>
+
+    <p class="mt-3"></p>
+
+    <div class="is-size-5 mt-4 has-text-weight-semibold">
+      <div
+        class="is-size-4 has-text-weight-semibold has-text-centered has-light-bottom-border"
+      >
+        Tech Stack
+      </div>
+    </div>
+
+    <div class="mt-4 has-text-centered">
+      {% for tag in page.tags %}
+      <!-- comment stops prettier formatting error-->
+      {% assign tag_class = tag | downcase | split: " " | join: "-" %}
+      <span class="tag {{ tag_class }}">
+        {{ tag }}
+      </span>
+      {% endfor %}
+    </div>
+
+    <p class="mt-3">
+      This project is a Ruby on Rails 6 app - PostgreSQL, Webpacker, Turbolinks,
+      Stimulus JS, and RSpec.
+    </p>
+
+    <div class="mt-4 has-text-centered">
+      Want to learn more about why I use this stack? Read about my
+      <a href="/tools">tools of choice</a>.
+    </div>
+  </div>
+</div>

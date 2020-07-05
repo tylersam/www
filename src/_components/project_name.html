@@ -1,0 +1,17 @@
+<div class="project-name-container">
+  <div>
+    <figure
+      class="image {% if detail_page %} is-48x48 {% else %} is-64x64 {% endif %}"
+    >
+      <img src="{{ icon }}" alt="Placeholder image" />
+    </figure>
+  </div>
+
+  <div class="ml-3">
+    <p class="title is-3 has-text-centered project-title">
+      {% if detail_page %} {{ title }} {% else %}
+      <a href="{{ url }}">{{ title }}</a>
+      {% endif %}
+    </p>
+  </div>
+</div>

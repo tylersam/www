@@ -1,0 +1,26 @@
+.icons-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-container img {
+  max-height: 75px;
+  max-width: 125px;
+  width: auto;
+}
+
+.icon-container.icon-horizontal img {
+  width: max-content;
+}
+
+@include mobile {
+  #icon-row-2 {
+    margin-top: 0 !important;
+  }
+}

@@ -1,0 +1,56 @@
+img.phone-image {
+  max-height: 600px;
+  width: auto;
+}
+
+.tag:not(body) {
+  color: white;
+}
+
+.tag.ruby-on-rails {
+  background-color: #cc0000;
+}
+
+.tag.bulma-css {
+  background-color: #00d1b2;
+}
+
+.tag.postgresql {
+  background-color: #336791;
+}
+
+.tag.stimulus-js,
+.tag.stimulusreflex {
+  background-color: darkgray;
+}
+
+.tag.react-native {
+  background-color: #61dafb;
+}
+
+.tag.apple-tv {
+  background-color: black;
+}
+
+.tag.redis {
+  background-color: #dc382d;
+}
+
+.tag.react {
+  background-color: #61dafb;
+}
+
+.tag.bootstrap {
+  background-color: #7952b3;
+}
+
+.project-name-container {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.project-title a {
+  color: black;
+}

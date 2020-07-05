@@ -1,0 +1,46 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<div class="columns is-centered">
+  <div class="column is-10">
+    <div class="columns is-multiline is-centered">
+      {% for project in site.projects %}
+      <div class="column is-6">
+        <div class="card">
+          <div class="card-content" style="min-height: 175px;">
+            <div class="">
+              {% render "project_name", icon: project.icon, url: project.url,
+              title: project.title %}
+
+              <div class="mt-4 mb-4 has-text-centered">
+                {{ project.description }}
+              </div>
+
+              <div class="has-text-centered">
+                {% for tag in project.tags %}
+                <!-- comment stops prettier formatting error-->
+                {% assign tag_class = tag | downcase | split: " " | join: "-" %}
+                <span class="tag {{ tag_class }}">
+                  {{ tag }}
+                </span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <a href="{{ project.url }}">
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <span>View Project</span>
+              </p>
+            </footer>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
