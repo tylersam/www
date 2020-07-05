@@ -1,4 +1,7 @@
 @import "~bulma/bulma";
+@import "nav";
+@import "projects";
+@import "tools";
 
 html {
   height: 100%;
@@ -12,34 +15,6 @@ body {
 
 #wrapper {
   flex: 1;
-}
-
-.navbar,
-.navbar-menu {
-  background-color: #03468f;
-}
-
-.navbar-item {
-  color: white;
-}
-
-.navbar-brand > a.navbar-item:hover,
-a.navbar-item:hover,
-a.navbar-item.active {
-  background-color: #022c58;
-  color: white;
-}
-
-.navbar-burger {
-  color: white;
-}
-
-.navbar-burger:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-a.navbar-burger:hover {
-  color: white;
 }
 
 .section {
@@ -67,32 +42,6 @@ a.navbar-burger:hover {
   margin-right: auto;
 }
 
-.icons-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.icon-container {
-  display: flex;
-  justify-content: center;
-}
-
-.icon-container img {
-  max-height: 75px;
-  max-width: 125px;
-  width: auto;
-}
-
-.icon-container.icon-horizontal img {
-  width: max-content;
-}
-
-img.phone-image {
-  max-height: 600px;
-  width: auto;
-}
-
 @include mobile {
   .background-top {
     height: 40px;
@@ -100,10 +49,6 @@ img.phone-image {
 
   .section {
     padding: 3rem 1.5rem;
-  }
-
-  #icon-row-2 {
-    margin-top: 0 !important;
   }
 }
 
