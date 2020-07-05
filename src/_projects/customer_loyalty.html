@@ -1,0 +1,85 @@
+---
+layout: project
+title: "Customer Loyalty"
+icon: "/images/icons/user-circle.svg"
+description: "extension of 3rd party customer loyalty platform"
+tags: ["Ruby on Rails", "Bulma CSS"]
+---
+
+<div class="columns is-vcentered">
+  <div class="column is-half">
+    <div
+      class="is-size-4 mb-4 has-text-weight-semibold has-text-centered has-light-bottom-border"
+    >
+      {% render "project_name", icon: page.icon, url: page.url, title:
+      page.title, detail_page: true %}
+    </div>
+
+    <p>
+      In this project, I extended a 3rd party customer loyalty platform to
+      handled some unique business requirements that the product could not
+      accomplish.
+    </p>
+
+    <p class="mt-4">
+      I built embedded web views for loyalty reward tracking and
+      customer-specific donation tracking in the 3rd party app. Customers can
+      now easily view how many meals have been donated on their behalf and view
+      their loyalty status.
+    </p>
+
+    <p class="mt-4">
+      Additionally, I developed a system that handles point-requests for
+      customers who forgot to log their visit at the time of purchase. While
+      building these features, I also integrated the loyalty registrations and
+      visits with point of sale data in the company
+      <a href="/projects/dashboard/">Dashboard</a>.
+    </p>
+
+    <div class="is-size-5 has-text-weight-semibold mt-6">
+      <div
+        class="is-size-4 has-text-weight-semibold has-text-centered has-light-bottom-border"
+      >
+        Tech Stack
+      </div>
+    </div>
+
+    <div class="mt-4 has-text-centered">
+      {% for tag in page.tags %}
+      <!-- comment stops prettier formatting error-->
+      {% assign tag_class = tag | downcase | split: " " | join: "-" %}
+      <span class="tag {{ tag_class }}">
+        {{ tag }}
+      </span>
+      {% endfor %}
+    </div>
+
+    <div class="mt-3">
+      The customer-facing elements of this are server rendered HTML from a Ruby
+      on Rails 6 app into an embedded web view of a third-party app.
+    </div>
+
+    <div class="mt-4 has-text-centered">
+      Want to learn more about why I use this stack? Read about my
+      <a href="/tools">tools of choice</a>.
+    </div>
+
+    <div class="is-hidden-tablet has-light-bottom-border mt-6 mb-5"></div>
+  </div>
+
+  <div class="column is-half">
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half">
+        <figure class="image">
+          <img class="phone-image" src="/images/loyalty-meals-sm.png" />
+        </figure>
+      </div>
+
+      <div class="column is-half">
+        <figure class="image">
+          <img class="phone-image" src="/images/loyalty-points-sm.png" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>

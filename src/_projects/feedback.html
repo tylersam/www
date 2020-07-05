@@ -1,0 +1,78 @@
+---
+layout: project
+title: Feedback
+icon: "/images/icons/comments-alt.svg"
+description: "survey tool specific to the company's service model"
+tags: ["Ruby on Rails", "PostgreSQL", "Stimulus JS"]
+---
+
+<div class="columns is-vcentered is-centered">
+  <div class="column">
+    <div
+      class="is-size-4 mb-4 has-text-weight-semibold has-light-bottom-border"
+    >
+      {% render "project_name", icon: page.icon, url: page.url, title:
+      page.title, detail_page: true %}
+    </div>
+
+    <p>
+      This customer survey tool collects feedback specific to the company's
+      service model. It displays views of the data in the
+      <a href="/projects/dashboard/">Dashboard</a>
+      that have been enriched with point of sale and customer loyalty data. This
+      tool helps the company zero in on and resolve specific problem areas.
+    </p>
+
+    <div class="is-size-5 has-text-weight-semibold mt-6">
+      <div
+        class="is-size-4 has-text-weight-semibold has-text-centered has-light-bottom-border"
+      >
+        Tech Stack
+      </div>
+    </div>
+
+    <div class="mt-4 has-text-centered">
+      {% for tag in page.tags %}
+      <!-- comment stops prettier formatting error-->
+      {% assign tag_class = tag | downcase | split: " " | join: "-" %}
+      <span class="tag {{ tag_class }}">
+        {{ tag }}
+      </span>
+      {% endfor %}
+    </div>
+
+    <p class="mt-3">
+      This project is a Ruby on Rails 6 app - PostgreSQL, Webpacker, Turbolinks,
+      Stimulus JS, and RSpec.
+    </p>
+
+    <div class="mt-4 has-text-centered">
+      Want to learn more about why I use this stack? Read about my
+      <a href="/tools">tools of choice</a>.
+    </div>
+
+    <div class="is-hidden-tablet has-light-bottom-border mt-6 mb-5"></div>
+  </div>
+
+  <div class="column">
+    <div>
+      <figure class="image">
+        <img src="/images/feedback-survey-results-browser-sm.png" />
+      </figure>
+    </div>
+
+    <div class="columns is-mobile is-vcentered mt-4">
+      <div class="column is-3">
+        <figure class="image">
+          <img src="/images/feedback-survey-phone-1-sm.png" />
+        </figure>
+      </div>
+
+      <div class="column">
+        <figure class="image">
+          <img src="/images/feedback-survey-results-browser-1-sm.png" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>

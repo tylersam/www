@@ -4,45 +4,43 @@ title: Projects
 permalink: /projects/
 ---
 
-<div class="columns is-multiline is-centered">
-  {% for project in site.projects %}
-  <div class="column is-4">
-    <div class="card">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img
-            src="{{ project.preview_image }}"
-            alt="{{ project.preview_image_alt }}"
-          />
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img
-                src="https://bulma.io/images/placeholders/96x96.png"
-                alt="Placeholder image"
-              />
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">
-              <a href="{{ project.url }}">{{ project.title }}</a>
-            </p>
-            <p class="subtitle is-6">@johnsmith</p>
-          </div>
-        </div>
+<div class="columns is-centered">
+  <div class="column is-10">
+    <div class="columns is-multiline is-centered">
+      {% for project in site.projects %}
+      <div class="column is-6">
+        <div class="card">
+          <div class="card-content" style="min-height: 175px;">
+            <div class="">
+              {% render "project_name", icon: project.icon, url: project.url,
+              title: project.title %}
 
-        <div class="content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-          iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
-          <a href="#">#responsive</a>
-          <br />
-          <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              <div class="mt-4 mb-4 has-text-centered">
+                {{ project.description }}
+              </div>
+
+              <div class="has-text-centered">
+                {% for tag in project.tags %}
+                <!-- comment stops prettier formatting error-->
+                {% assign tag_class = tag | downcase | split: " " | join: "-" %}
+                <span class="tag {{ tag_class }}">
+                  {{ tag }}
+                </span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <a href="{{ project.url }}">
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <span>View Project</span>
+              </p>
+            </footer>
+          </a>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
-  {% endfor %}
 </div>
