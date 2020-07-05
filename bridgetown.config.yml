@@ -24,3 +24,4 @@ collections:
   projects:
     output: true
     permalink: /:collection/:name
+    sort_by: order
